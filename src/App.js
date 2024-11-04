@@ -1,6 +1,6 @@
 import './App.css';
 import Header from './component/Header';
-('./component/Header');
+import TodoEditor from './component/TodoEditor';
 
 function App() {
   return (
@@ -9,7 +9,9 @@ function App() {
       <div>
         <Header />
       </div>
-      <div>To Do Editor</div>
+      <div>
+        <TodoEditor />
+      </div>
       <div>To Do List</div>
     </div>
   );
