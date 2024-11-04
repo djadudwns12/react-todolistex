@@ -29,7 +29,7 @@ function App() {
   // 할일 아이템의 상태를 관리할 state 생성
   const [todo, setTodo] = useState(mokTodo);
 
-  const idRef = useRef(3);
+  const idRef = useRef(3); // ReactDOM객체에 접근하기 위해 사용하는 hooks
 
   // 할일 아이템 추가
   const onCreate = (content) => {
