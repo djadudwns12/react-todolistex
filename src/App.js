@@ -37,7 +37,7 @@ function App() {
     const newItem = {
       id: idRef.current,
       isDone: false,
-      content: content,
+      content,
       createdDate: new Date().getDate(),
     };
     setTodo([newItem, ...todo]); // 새로운 배열에 들어가서 값이 변경되었다고 판단 // setter를 이용하여 새로운 배열을 생성해주었다.(주소값 변함)

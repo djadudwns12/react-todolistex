@@ -1,7 +1,7 @@
 import './TodoItem.css';
 const TodoItem = () => {
   return (
-    <div class="TodoItem">
+    <div className="TodoItem">
       <div className="checkbox-col">
         <input type="checkbox" />
       </div>
