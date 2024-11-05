@@ -1,6 +1,7 @@
 import TodoItem from './TodoItem';
 import './TodoList.css';
-const TodoList = () => {
+const TodoList = ({ todo }) => {
+  // 구조분해할당
   return (
     <div className="TodoList">
       <h4>Todo List</h4>
@@ -10,7 +11,10 @@ const TodoList = () => {
         type="text"
       />
       <div className="list_wrapper">
-        <TodoItem />
+        {todo.map((item) => {
+          return <div>{item.content}</div>;
+        })}
+
         <TodoItem />
         <TodoItem />
         <TodoItem />
