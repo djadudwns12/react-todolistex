@@ -43,6 +43,20 @@ function App() {
     setTodo([newItem, ...todo]); // 새로운 배열에 들어가서 값이 변경되었다고 판단 // setter를 이용하여 새로운 배열을 생성해주었다.(주소값 변함)
     idRef.current++; // idRef의 값을 +1하여준다.
   };
+  // 할일 아이템 수정하는 함수
+  const onUpdate = (targetId) => {
+    setTodo(
+      todo.map((item) => {
+        if (targetId === item.id) {
+          // 수정되는 할일 객체라면 isDone을 반전하여 새로운 배열에 추가되도록
+          return { ...item, isDone: !item.isDone };
+        } else {
+          return item; // 수정되는 할일이 아니라면 그대로 새로운 배열에 추가
+        }
+      }),
+    );
+  };
+
   return (
     <div className="App">
       <h2>ToDoList</h2>
