@@ -4,32 +4,32 @@ import Header from './component/Header';
 import TodoEditor from './component/TodoEditor';
 import TodoList from './component/TodoList';
 //  mockup데이터를 널어주기
-const mokTodo = [
-  {
-    id: 0,
-    isDone: false,
-    content: '리액트 공부하기',
-    createdDate: new Date().toLocaleDateString(),
-  },
-  {
-    id: 1,
-    isDone: true,
-    content: '빨래하기',
-    createdDate: new Date().toLocaleDateString(),
-  },
-  {
-    id: 2,
-    isDone: false,
-    content: '청소하기',
-    createdDate: new Date().toLocaleDateString(),
-  },
-];
+// const mokTodo = [
+//   {
+//     id: 0,
+//     isDone: false,
+//     content: '리액트 공부하기',
+//     createdDate: new Date().toLocaleDateString(),
+//   },
+//   {
+//     id: 1,
+//     isDone: true,
+//     content: '빨래하기',
+//     createdDate: new Date().toLocaleDateString(),
+//   },
+//   {
+//     id: 2,
+//     isDone: false,
+//     content: '청소하기',
+//     createdDate: new Date().toLocaleDateString(),
+//   },
+// ];
 
 function App() {
   // 할일 아이템의 상태를 관리할 state 생성
-  const [todo, setTodo] = useState(mokTodo);
+  const [todo, setTodo] = useState([]);
 
-  const idRef = useRef(3); // ReactDOM객체에 접근하기 위해 사용하는 hooks
+  const idRef = useRef(0); // ReactDOM객체에 접근하기 위해 사용하는 hooks
 
   // 할일 아이템 추가
   const onCreate = (content) => {
