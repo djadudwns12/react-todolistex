@@ -2,8 +2,8 @@ import { useRef, useState } from 'react';
 import './TodoEditor.css';
 
 const ToDoEditor = ({ onCreate }) => {
-  const [content, setContent] = useState('');
-  const inputRef = useRef();
+  const [content, setContent] = useState(''); // 할일 content를 임시저장하기 위한 state hooks
+  const inputRef = useRef(); // input태그에 접근하기위한
 
   const onChangeContent = (e) => {
     setContent(e.target.value);
