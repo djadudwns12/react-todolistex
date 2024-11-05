@@ -1,5 +1,5 @@
 import './TodoItem.css';
-const TodoItem = ({ id, isDone, content, createdDate, onUpdate }) => {
+const TodoItem = ({ id, isDone, content, createdDate, onUpdate, onDelete }) => {
   const onChangeCheckBox = () => {
     onUpdate(id);
   };

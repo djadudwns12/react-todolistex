@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import TodoItem from './TodoItem';
 import './TodoList.css';
-const TodoList = ({ todo, onUpdate }) => {
+const TodoList = ({ todo, onUpdate, onDelete }) => {
   // 구조분해할당
   const [search, setSearch] = useState('');
   const onChangeSearch = (e) => {
@@ -29,7 +29,12 @@ const TodoList = ({ todo, onUpdate }) => {
       />
       <div className="list_wrapper">
         {getSearchResult().map((item) => (
-          <TodoItem key={item.id} {...item} onUpdate={onUpdate} />
+          <TodoItem
+            key={item.id}
+            {...item}
+            onUpdate={onUpdate}
+            onDelete={onDelete}
+          />
         ))}
       </div>
     </div>
