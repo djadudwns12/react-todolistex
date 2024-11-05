@@ -12,11 +12,8 @@ const TodoList = ({ todo }) => {
       />
       <div className="list_wrapper">
         {todo.map((item) => (
-          <TodoItem {...item} />
+          <TodoItem key={item.id} {...item} />
         ))}
-
-        <TodoItem />
-        <TodoItem />
       </div>
     </div>
   );
