@@ -9,19 +9,19 @@ const mokTodo = [
     id: 0,
     isDone: false,
     content: '리액트 공부하기',
-    createdDate: new Date().getDate(),
+    createdDate: new Date().toLocaleDateString(),
   },
   {
     id: 1,
     isDone: true,
     content: '빨래하기',
-    createdDate: new Date().getDate(),
+    createdDate: new Date().toLocaleDateString(),
   },
   {
     id: 2,
     isDone: false,
     content: '청소하기',
-    createdDate: new Date().getDate(),
+    createdDate: new Date().toLocaleDateString(),
   },
 ];
 
@@ -38,7 +38,7 @@ function App() {
       id: idRef.current,
       isDone: false,
       content,
-      createdDate: new Date().getDate(),
+      createdDate: new Date().toLocaleDateString(),
     }; // 추가될 할일 객체
     setTodo([newItem, ...todo]); // 새로운 배열에 들어가서 값이 변경되었다고 판단 // setter를 이용하여 새로운 배열을 생성해주었다.(주소값 변함)
     idRef.current++; // idRef의 값을 +1하여준다.
