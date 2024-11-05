@@ -1,5 +1,5 @@
 import './TodoItem.css';
-const TodoItem = ({ id, isDone, content, createdDate }) => {
+const TodoItem = ({ id, isDone, content, createdDate, onUpdate }) => {
   return (
     <div className="TodoItem">
       <div className="checkbox-col">
