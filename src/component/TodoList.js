@@ -11,11 +11,10 @@ const TodoList = ({ todo }) => {
         type="text"
       />
       <div className="list_wrapper">
-        {todo.map((item) => {
-          return <div>{item.content}</div>;
-        })}
+        {todo.map((item) => (
+          <TodoItem {...item} />
+        ))}
 
-        <TodoItem />
         <TodoItem />
         <TodoItem />
       </div>
