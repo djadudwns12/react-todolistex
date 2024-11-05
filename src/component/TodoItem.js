@@ -1,9 +1,13 @@
 import './TodoItem.css';
 const TodoItem = ({ id, isDone, content, createdDate, onUpdate }) => {
+  const onChangeCheckBox = () => {
+    onUpdate(id);
+  };
+
   return (
     <div className="TodoItem">
       <div className="checkbox-col">
-        <input type="checkbox" checked={isDone} />
+        <input type="checkbox" checked={isDone} onChange={onChangeCheckBox} />
       </div>
       <div className="title-col">{content}</div>
       <div className="date-col">
